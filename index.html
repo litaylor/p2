@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="jquery.fullPage.min.js"></script>
   </head>
@@ -8,10 +9,26 @@
 
     <div id="fullpage">
       <div class="section active">
-        ACTIVE
+        <h1><span class="smallh1">the</span> HIGH <span class="yellow">COST</span> <br /><span class="smallh1">of</span> HIGH <span class="yellow">FLYING</span></h1>
+        <div class="description">
+          <span class="yellow">The Internet</span> has revolutionized nearly every industry on the planet, and basketball shoes
+          are no exception. Recently, young sneakerheads
+          have found themselves paying <span class="yellow">hundreds and
+          thousands of dollars for kicks</span> - that is, when
+          they can even find them for sale. Long lines and
+          quick online sellouts have led to a burgeoning
+          resale market. eBay, Craigslist, and social media
+          sites have been the way for many to find their
+          fashionable footwear. But where the market is
+          free, it can be costly.
+        </div>
       </div>
       <div class="section">
-        SECTION
+        <h2>RETAIL PRICES <span class="yellow">AREN'T GOING UP</span></h2>
+        <img src="jordangraph.svg" class="graphimg" />
+        <div class="description">
+          In fact, when adjusted for inflation, the price of the most popular shoes wasn&rsquo;t higher over the last fifteen years than it was in the 	&rsquo;80s and 	&rsquo;90s. The Air Jordan line has released a shoe every year but two since 1985, and prices have remained pretty consistent. 
+        </div>
       </div>
       <div class="section">
         SECTION
@@ -38,7 +55,9 @@
         anchors:['firstPage', 'secondPage'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['1','2','3','4','5','6'],
+        navigationTooltips: ['The High Cost of High Flying',
+        'Retail Prices Aren&#39;t Going Up',
+        '3','4','5','6'],
         showActiveTooltip: true,
         // slidesNavigation: true,
         // slidesNavPosition: 'bottom',
@@ -70,7 +89,7 @@
         controlArrows: true,
         verticalCentered: true,
         resize : false,
-        sectionsColor : ['#ccc', '#aaa','#ccc', '#aaa','#ccc', '#aaa'],
+        // sectionsColor : ['#ccc', '#aaa','#ccc', '#aaa','#ccc', '#aaa'],
         paddingTop: '3em',
         paddingBottom: '10px',
         fixedElements: '#header, .footer',
