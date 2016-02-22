@@ -43,7 +43,8 @@
     normalScrollElements: '#element1, .element2',
     scrollOverflow: false,
     touchSensitivity: 15,
-    normalScrollElementTouchThreshold: 5
+    normalScrollElementTouchThreshold: 5,
+
   });
 });
 
@@ -116,18 +117,26 @@
 
         <img src="yeezy.svg" class="vertimg"/>
         <p class="description">
-          Rapper Kanye West released some of the world's most high-profile sneakers. His "Air Yeezy II Red Octobers sold in 2014 for just $250 retail but an average of <span class="yellow">$2,958 on eBay.</span>
+          Rapper Kanye West released some of the world's most high-profile sneakers. His "Air Yeezy II Red Octobers sold in 2014 for just $250 retail but an average of <span class="yellow">$5,979 online</span> in the past 12 months.
         </p>
 
       </div>
       <div class="section" style="text-align:center;">
-        <button class="btn btn-primary" style="width:80%;height:80%; font-size:200px;">Play<br />Quiz</button>
+        <button id="playQuizButton" class="btn btn-primary" style="width:80%;height:80%; font-size:200px;">Play<br />Quiz</button>
+
+      </div>
+    </div>
+
+    <div id="quizbox">
+      <button class="btn btn-danger btn-block" id="closeQuizButton">[ X ]</button>
+      <div id="quiz">
 
       </div>
     </div>
 
 
     <script>
+
 
     $('div').height(100);
 
@@ -139,6 +148,21 @@
 
     <script type="text/javascript">
       var quiz = jQuery('#quiz').quiz('1B-fY-DftjNmpBBiHHOr5FreaOIx2PGGrjeQlERDQ0Mk'); //your published spreadsheet key or URL goes here
+    </script>
+
+    <script>
+    $(document).ready(function(){
+      $("#playQuizButton").click(function(){
+        $('#quizbox').show();
+        document.getElementById("quizbox").style.height='95%';
+        document.getElementById("quiz").style.height='90%';
+
+      });
+      $("#closeQuizButton").click(function(){
+        $('#quizbox').hide();
+      });
+    });
+
     </script>
 
   </body>
