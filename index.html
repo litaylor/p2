@@ -1,16 +1,58 @@
 <html>
   <head>
+
     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="vendors/jquery.easings.min.js"></script>
     <script src="jquery.fullPage.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready( function(){
+    $('#fullpage').fullpage({
+
+    // navigation: true,
+    // navigationPosition: 'right',
+    // navigationTooltips: ['The High Cost of High Flying',
+    // 'Retail Prices Aren&#39;t Going Up',
+    // 'The Devil&rsquo;s in the Resale',
+    // 'Laissez Faire Jordan'],
+    // showActiveTooltip: true,
+    // slidesNavigation: true,
+    // slidesNavPosition: 'bottom',
+
+    //Scrolling
+    scrollingSpeed: 1100,
+    autoScrolling: true,
+    fitToSection: true,
+    fitToSectionDelay: 1000,
+    scrollBar: false,
+    easing: 'easeInOutCubic',
+    easingcss3: 'ease',
+    loopBottom: false,
+    loopTop: false,
+    loopHorizontal: true,
+    continuousVertical: false,
+    normalScrollElements: '#element1, .element2',
+    scrollOverflow: false,
+    touchSensitivity: 15,
+    normalScrollElementTouchThreshold: 5
+  })});
+
+
+
+
+    </script>
+
+
   </head>
   <body>
 
     <div id="fullpage">
       <div class="section active">
         <h1><span class="smallh1">the</span> HIGH <span class="yellow">COST</span> <br /><span class="smallh1">of</span> HIGH <span class="yellow">FLYING</span></h1>
-        <div class="description">
+        <p class="description">
           <span class="yellow">The Internet</span> has revolutionized nearly every industry on the planet, and basketball shoes
           are no exception. Recently, young sneakerheads
           have found themselves paying <span class="yellow">hundreds and
@@ -21,95 +63,33 @@
           sites have been the way for many to find their
           fashionable footwear. But where the market is
           free, it can be costly.
-        </div>
+        </p>
+
+
       </div>
       <div class="section">
         <h2>RETAIL PRICES <span class="yellow">AREN'T GOING UP</span></h2>
         <img src="jordangraph.svg" class="graphimg" />
-        <div class="description">
-          In fact, when adjusted for inflation, the price of the most popular shoes wasn&rsquo;t higher over the last fifteen years than it was in the 	&rsquo;80s and 	&rsquo;90s. The Air Jordan line has released a shoe every year but two since 1985, and prices have remained pretty consistent. 
-        </div>
-      </div>
-      <div class="section">
-        SECTION
-      </div>
-      <!-- <div class="section">
-        SECTION
-      </div>
-      <div class="section">
-        SECTION
-      </div> -->
-      <div class="section fp-auto-height">
-        FOOTER
-      </div>
+        <p class="description">
+          In fact, when adjusted for inflation, the price of the most popular shoes <span class="yellow">wasn&rsquo;t higher over the last fifteen years than it was in the 	&rsquo;80s and 	&rsquo;90s.</span> The Air Jordan line has released a shoe every year but two since 1985, and prices have remained pretty consistent.
+        </p>
 
+      </div>
+      <div class="section">
+        <h2><span class="smallh1">THE</span> DEVIL&rsquo;S <span class="smallh1">IN THE</span> <span class="yellow">RESALE</span></h2>
+        <img src="ebay.png" class="graphimg" />
+        <p class="description">
+          Anticipated sneakers are released in such limited supply, many people can't get them directly. Online resales make up an increasingly significant section of the sneaker industry, accounting for <span class="yellow">nearly a quarter of a billion dollars in 2014</span> - a quarter of that on eBay.
+        </p>
+      </div>
+      <div class="section">
+        <h2><span class="yellow">LAISSEZ FAIRE</span> JORDAN</h2>
+        <img src="jordanresale.png" class="graphimg" />
+        <p class="description">
+          Even as retail prices of Jordan line shoes remain stagnant, the average buyer is <span class="yellow">paying about 55% more</span> to buy them, thanks to low supply in a free online market.
+        </p>
+      </div>
     </div>
-
-
-
-    <script>
-      $(document).ready(function() {
-        $('#fullpage').fullpage({
-        menu: '#menu',
-        lockAnchors: false,
-        anchors:['firstPage', 'secondPage'],
-        navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: ['The High Cost of High Flying',
-        'Retail Prices Aren&#39;t Going Up',
-        '3','4','5','6'],
-        showActiveTooltip: true,
-        // slidesNavigation: true,
-        // slidesNavPosition: 'bottom',
-
-        //Scrolling
-        css3: true,
-        scrollingSpeed: 700,
-        autoScrolling: true,
-        fitToSection: true,
-        fitToSectionDelay: 1000,
-        scrollBar: false,
-        easing: 'easeInOutCubic',
-        easingcss3: 'ease',
-        loopBottom: false,
-        loopTop: false,
-        loopHorizontal: true,
-        continuousVertical: false,
-        normalScrollElements: '#element1, .element2',
-        scrollOverflow: false,
-        touchSensitivity: 15,
-        normalScrollElementTouchThreshold: 5,
-
-        //Accessibility
-        keyboardScrolling: true,
-        animateAnchor: true,
-        recordHistory: true,
-
-        //Design
-        controlArrows: true,
-        verticalCentered: true,
-        resize : false,
-        // sectionsColor : ['#ccc', '#aaa','#ccc', '#aaa','#ccc', '#aaa'],
-        paddingTop: '3em',
-        paddingBottom: '10px',
-        fixedElements: '#header, .footer',
-        responsiveWidth: 0,
-        responsiveHeight: 0,
-
-        //Custom selectors
-        sectionSelector: '.section',
-        slideSelector: '.slide',
-
-        //events
-        onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
-        afterResize: function(){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-        });
-      });
-    </script>
 
 
   </body>

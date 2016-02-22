@@ -1,7 +1,3 @@
-/**{
-  border: thin white solid;
-}*/
-
 @font-face {
   font-family: leagueGothic;
   src: url('League-Gothic/LeagueGothic-Regular.otf');
@@ -11,20 +7,19 @@
 
 @font-face {
   font-family: franklinGothic;
-  src: url('franklingothicfs_demi_macroman/franklingothic-demi-webfont.woff');
+  src: url('franklingothicfs_demi_macroman/franklingothic-demi-webfont.ttf');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: franklinGothic;
-  src: url('franklingothicfs_book_macroman/franklingothic-book-webfont.woff');
+  src: url('franklingothicfs_book_macroman/franklingothic-book-webfont.ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  /*background-color: #4A4D53;*/
   background: url('blacktop.png') left no-repeat;
   background-size: cover;
   color: #A2DEF9;
@@ -55,7 +50,7 @@ h2{
 }
 
 .smallh1 {
-  font-size:50%;
+  /*font-size:50%;*/
 }
 
 .section{
@@ -66,7 +61,6 @@ h2{
 .description {
   font-size:27px;
   line-height:36px;
-  margin-top:36px;
 }
 
 .graphimg{
