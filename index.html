@@ -2,23 +2,29 @@
   <head>
 
     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="vendors/jquery.easings.min.js"></script>
     <script src="jquery.fullPage.min.js"></script>
 
     <script type="text/javascript">
     $(document).ready( function(){
+
+
     $('#fullpage').fullpage({
 
-    // navigation: true,
-    // navigationPosition: 'right',
-    // navigationTooltips: ['The High Cost of High Flying',
-    // 'Retail Prices Aren&#39;t Going Up',
-    // 'The Devil&rsquo;s in the Resale',
-    // 'Laissez Faire Jordan'],
-    // showActiveTooltip: true,
+    navigation: true,
+    navigationPosition: 'left',
+    navigationTooltips: ['The High Cost of High Flying',
+    'Retail Prices Aren&#39;t Going Up',
+    'So Why are they So Expensive?',
+    'The Devil&rsquo;s in the Resale',
+    'Laissez Faire Jordan',
+    'Yeezy Jumped Over Jumpman',
+    'Quiz'],
+    showActiveTooltip: true,
     // slidesNavigation: true,
     // slidesNavPosition: 'bottom',
 
@@ -38,12 +44,15 @@
     scrollOverflow: false,
     touchSensitivity: 15,
     normalScrollElementTouchThreshold: 5
-  })});
+  });
+});
 
 
 
 
     </script>
+    <link href="newsquiz-master/css/style.css" rel="stylesheet" type="text/css">
+
 
 
   </head>
@@ -76,6 +85,19 @@
 
       </div>
       <div class="section">
+        <h2>SO WHY ARE THEY SO EXPENSIVE?</h2>
+        <p class="description">
+          Shoes are released in <span class="yellow">limited supply</span>, sometimes as surprise releases.
+        </p>
+        <p class="description">
+          <span class="yellow">Hackers have developed bots</span> that buy up new releases automatically to resell.
+        </p>
+        <p class="description">
+          Resellers mark up prices by <span class="yellow">hundreds or thousands of dollars</span>.
+        </p>
+
+      </div>
+      <div class="section">
         <h2><span class="smallh1">THE</span> DEVIL&rsquo;S <span class="smallh1">IN THE</span> <span class="yellow">RESALE</span></h2>
         <img src="ebay.png" class="graphimg" />
         <p class="description">
@@ -89,8 +111,35 @@
           Even as retail prices of Jordan line shoes remain stagnant, the average buyer is <span class="yellow">paying about 55% more</span> to buy them, thanks to low supply in a free online market.
         </p>
       </div>
+      <div class="section">
+        <h2><span class="yellow">YEEZY</span> JUST JUMPED OVER JUMPMAN</h2>
+
+        <img src="yeezy.svg" class="vertimg"/>
+        <p class="description">
+          Rapper Kanye West released some of the world's most high-profile sneakers. His "Air Yeezy II Red Octobers sold in 2014 for just $250 retail but an average of <span class="yellow">$2,958 on eBay.</span>
+        </p>
+
+      </div>
+      <div class="section" style="text-align:center;">
+        <button class="btn btn-primary" style="width:80%;height:80%; font-size:200px;">Play<br />Quiz</button>
+
+      </div>
     </div>
 
+
+    <script>
+
+    $('div').height(100);
+
+    // THIS IS A WORKAROUND TO RESET HEIGHTS BECAUSE FOR SOME REASON THE HEIGHTS WERE ALWAYS MESSED UP ON PAGE LOAD BEFORE RESIZING THE WINDOW
+
+    </script>
+    <script src="newsquiz-master/js/tabletop.js" type="text/javascript"></script>
+    <script src="newsquiz-master/js/script.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      var quiz = jQuery('#quiz').quiz('1B-fY-DftjNmpBBiHHOr5FreaOIx2PGGrjeQlERDQ0Mk'); //your published spreadsheet key or URL goes here
+    </script>
 
   </body>
 </html>

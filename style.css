@@ -25,6 +25,7 @@ body {
   color: #A2DEF9;
   font-family: franklinGothic;
   font-weight:normal;
+  font-size:16px;
 }
 
 h1,h2,h3{
@@ -34,14 +35,14 @@ h1,h2,h3{
 }
 
 h1{
-  font-size: 180px;
+  font-size: 1000%;
   font-style:italic;
   margin:0px;
   padding:0px;
 }
 
 h2{
-  font-size: 150px;
+  font-size: 900%;
   font-style:italic;
 }
 
@@ -50,7 +51,7 @@ h2{
 }
 
 .smallh1 {
-  /*font-size:50%;*/
+  font-size:50%;
 }
 
 .section{
@@ -59,23 +60,28 @@ h2{
 }
 
 .description {
-  font-size:27px;
-  line-height:36px;
+  font-size:250%;
+  line-height:1.2em;
 }
 
 .graphimg{
   width:100%;
   height:auto;
+  margin-bottom: 2.4em;
+  margin-top: 2.4em;
+}
+
+.vertimg{
+  height:300px;
+  float:left;
+  margin-right:10px;
 }
 
 @media (max-width:991px) {
-  h1{
-    font-size:72px;
-  }
-  h2{
-    font-size:60px;
-  }
-  .description{
-    font-size:20px;
-  }
+#fp-nav{
+  display: none;
+}
+.description{
+  font-size: 350%;
+}
 }
