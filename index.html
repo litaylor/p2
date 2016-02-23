@@ -44,6 +44,24 @@
     scrollOverflow: false,
     touchSensitivity: 15,
     normalScrollElementTouchThreshold: 5,
+    anchors: ['p1','p2','p3','p4','p5','p6','p7'],
+
+    onLeave: function(index, nextIndex, direction){
+            var leavingSection = $(this);
+
+            //after leaving section 2
+            if(index == 6 && direction =='down'){
+              $('#scrollTip').fadeOut(600);
+            }
+            else if(index == 7 && direction =='up') {
+              $('#scrollTip').fadeIn(600);
+            }
+        }
+
+    // fixedElements: '#scrollTip'
+    // onLeave: function(index, nextIndex, direction){
+    //
+    // }
 
   });
 });
@@ -133,9 +151,9 @@
 
       </div>
     </div>
-    <!-- <div id="downarrow">
-
-    </div> -->
+    <span id="scrollTip">
+      Scroll Down
+    </span>
 
 
     <script>
@@ -166,6 +184,9 @@
       $("#closeQuizButton").click(function(){
         $('#quizbox').fadeOut(600);
       });
+      // $(window).scroll(function(){
+      //   $('#scrollTip').fadeOut();
+      // });
     });
 
     </script>

@@ -125,11 +125,29 @@ h2{
   font-family: leagueGothic;
 }
 
+#scrollTip {
+  position: absolute;
+  background-color: #000000;
+  width: 75%;
+  left: 50%;
+  margin-left:-37.5%;
+  bottom:0px;
+  z-index: 200;
+  height:60px;
+  text-align: center;
+  font-size:45px;
+  line-height: 60px;
+  display:none;
+}
+
 @media (max-width:991px) {
 #fp-nav{
   display: none;
 }
 .description{
   font-size: 350%;
+}
+#scrollTip{
+  display: block;
 }
 }
