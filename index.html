@@ -60,7 +60,7 @@
   <body>
 
     <div id="fullpage">
-      <div class="section active">
+      <div class="section active" id="firstsection">
         <h1><span class="smallh1">the</span> HIGH <span class="yellow">COST</span> <br /><span class="smallh1">of</span> HIGH <span class="yellow">FLYING</span></h1>
         <p class="description">
           <span class="yellow">The Internet</span> has revolutionized nearly every industry on the planet, and basketball shoes
@@ -117,28 +117,32 @@
 
         <img src="yeezy.svg" class="vertimg"/>
         <p class="description">
-          Rapper Kanye West released some of the world's most high-profile sneakers. His "Air Yeezy II Red Octobers sold in 2014 for just $250 retail but an average of <span class="yellow">$5,979 online</span> in the past 12 months.
+          Rapper Kanye West released some of the world's most high-profile sneakers. His "Air Yeezy II Red Octobers" sold in 2014 for just $250 retail but an average of <span class="yellow">$5,979 online</span> in the past 12 months.
         </p>
 
       </div>
       <div class="section" style="text-align:center;">
-        <button id="playQuizButton" class="btn btn-primary" style="width:80%;height:80%; font-size:200px;">Play<br />Quiz</button>
+        <button id="playQuizButton" class="btn btn-primary">PLAY<br />QUIZ</button>
 
       </div>
     </div>
 
     <div id="quizbox">
-      <button class="btn btn-danger btn-block" id="closeQuizButton">[ X ]</button>
+      <button class="btn btn-danger btn-large" id="closeQuizButton">&nbsp;&nbsp;X&nbsp;&nbsp;</button>
       <div id="quiz">
 
       </div>
     </div>
+    <!-- <div id="downarrow">
+
+    </div> -->
 
 
     <script>
 
+    $('div').css({'height':'0px'});
 
-    $('div').height(100);
+
 
     // THIS IS A WORKAROUND TO RESET HEIGHTS BECAUSE FOR SOME REASON THE HEIGHTS WERE ALWAYS MESSED UP ON PAGE LOAD BEFORE RESIZING THE WINDOW
 
@@ -153,13 +157,14 @@
     <script>
     $(document).ready(function(){
       $("#playQuizButton").click(function(){
-        $('#quizbox').show();
+        $('#quizbox').fadeIn(600);
         document.getElementById("quizbox").style.height='95%';
-        document.getElementById("quiz").style.height='90%';
+        document.getElementById("quiz").style.height='100%';
+
 
       });
       $("#closeQuizButton").click(function(){
-        $('#quizbox').hide();
+        $('#quizbox').fadeOut(600);
       });
     });
 

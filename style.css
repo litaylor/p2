@@ -84,7 +84,7 @@ h2{
   left:2.5%;
   position: fixed;
   z-index: 100;
-  background-color: #000000;
+  background-color: #555;
   display: none;
   padding:10px;
   color: #ffffff;
@@ -102,17 +102,27 @@ h2{
   color: #000000;
 }
 
-#quizbox .btn-block{
+#quizbox .btn-large{
   font-size:60px;
-  height:10%;
+  position:fixed;
+  right:5%;
+  top:5%;
+  z-index:900;
 }
 
 #quizbox #quiz{
   overflow-y: scroll;
+  height:100%;
 }
 
 #quizbox .question{
-  font-size: 60px;
+  font-size: 45px;
+  padding-right: 10%;
+}
+
+#playQuizButton {
+  width:80%;height:80%; font-size:200px;
+  font-family: leagueGothic;
 }
 
 @media (max-width:991px) {
